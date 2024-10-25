@@ -29,11 +29,12 @@
                     </div>
 
                     <div class="flex gap-[20px] items-center">
-                        <div class="relative">
+                        <div id="cart-btn" class="relative hover:scale-125 transition ease-in-out duration-300">
                             <img class="h-[36px]" src="./assests/cart.png" alt="">
-                            <div
-                                class="h-[25px] w-[25px] bg-[#ff5242] absolute top-[-5px] right-[-5px] rounded text-white text-center">
-                                1</div>
+                            <span id="nav-itemcount"
+                                class="py-[2px] px-[5px] bg-[#ff5242] absolute top-[-5px] right-[-5px] rounded text-white text-center">
+                                0
+                            </span>
                         </div>
                         <button class="bg-[#ff5242] rounded text-white font-bold px-[30px] py-[10px]">Order Now</button>
                     </div>
@@ -77,118 +78,38 @@
             </div>
 
             <!-- cards container -->
-            <section class="flex items-center justify-center gap-[10px] max-w-[1200px] mx-auto">
-                <!-- cards -->
-                <div class="relative">
-                    <div class="max-w-[320px] p-[15px] bg-[#ecedef] rounded">
-                        <img class="h-[180px] w-full object-cover" src="./assests/meal-1.jpg" alt="">
-                        <h3 class="font-[600] mt-[15px]">Chicken</h3>
-                        <p class="text-gray-700 font-[500]">65$/each</p>
-                        <p class="text-gray-600 mt-[15px]">Description Lorem ipsum dolor sit amet consectetur
-                            adipisicing
-                            elit.
-                            Ullam
-                            eum eveniet itaque nemo</p>
+            <section id="dish-container" class="flex items-center justify-center gap-[10px] max-w-[1200px] mx-auto">
 
-                        <div class="flex flex-col gap-[10px] mt-[18px]">
-                            <button
-                                class="font-[500] border-[#ff5242] border-[2px] bg-[#ff5242] w-full rounded text-white px-[30px] py-[4px]">Add
-                                to Order</button>
-                            <button
-                                class="font-[500] border-[#ff5242] border-[2px] w-full rounded px-[30px] py-[4px] text-[#ff5242]">Customize</button>
-                        </div>
-                    </div>
-                    <div
-                        class="absolute bg-[#ff5242] text-white px-[20px] py-[5px] rounded-full font-[600] rotate-[-45deg] top-[-18px] left-[-33px] uppercase">
-                        New</div>
-                </div>
-                <!-- cards -->
-                <div class="relative">
-                    <div class="max-w-[320px] p-[15px] bg-[#ecedef] rounded">
-                        <img class="h-[180px] w-full object-cover" src="./assests/meal-2.jpg" alt="">
-                        <h3 class="font-[600] mt-[15px]">Chicken</h3>
-                        <p class="text-gray-700 font-[500]">65$/each</p>
-                        <p class="text-gray-600 mt-[15px]">Description Lorem ipsum dolor sit amet consectetur
-                            adipisicing
-                            elit.
-                            Ullam
-                            eum eveniet itaque nemo</p>
-
-                        <div class="flex flex-col gap-[10px] mt-[18px]">
-                            <button
-                                class="font-[500] border-gray-500 border-[2px] bg-gray-500 w-full rounded text-white px-[30px] py-[4px]">Add
-                                to Order</button>
-                            <button
-                                class="font-[500] border-[#ff5242] border-[2px] w-full rounded px-[30px] py-[4px] text-[#ff5242]">Customize</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- cards -->
-                <div class="relative">
-                    <div class="max-w-[320px] p-[15px] bg-[#ecedef] rounded">
-                        <img class="h-[180px] w-full object-cover" src="./assests/meal-3.jpg" alt="">
-                        <h3 class="font-[600] mt-[15px]">Chicken</h3>
-                        <p class="text-gray-700 font-[500]">65$/each</p>
-                        <p class="text-gray-600 mt-[15px]">Description Lorem ipsum dolor sit amet consectetur
-                            adipisicing
-                            elit.
-                            Ullam
-                            eum eveniet itaque nemo</p>
-
-                        <div class="flex flex-col gap-[10px] mt-[18px]">
-                            <button
-                                class="font-[500] border-[#ff5242] border-[2px] bg-[#ff5242] w-full rounded text-white px-[30px] py-[4px]">Add
-                                to Order</button>
-                            <button
-                                class="font-[500] border-[#ff5242] border-[2px] w-full rounded px-[30px] py-[4px] text-[#ff5242]">Customize</button>
-                        </div>
-                    </div>
-                    <div
-                        class="absolute bg-[#ff5242] text-white px-[20px] py-[5px] rounded-full font-[600] rotate-[-45deg] top-[-18px] left-[-33px] uppercase">
-                        New</div>
-                </div>
             </section>
         </section>
 
         <!-- sidebar -->
-        <section class="shadow-lg w-[400px] bg-[#ff5242] h-[100vh] mr-[-400px">
+        <section id="sidebar"
+            class="transition ease-in-out duration-300 w-0 translate-x-[400px] shadow-lg bg-[#ff5242] h-[100vh] relative">
             <!-- sidebar header -->
             <div class="flex items-center justify-between p-[15px] bg-white">
-                <p class="text-[#ff5242]">1 Item</p>
-                <button class="border border-[#ff5242] rounded text-[#ff5242] py-[3px] px-[6px]">Close</button>
+                <p class="text-[#ff5242]"><span id="sidebar-itemcount">0</span> Item</p>
+                <button id="sidebar-close"
+                    class="border border-[#ff5242] rounded text-[#ff5242] py-[3px] px-[6px]">Close</button>
             </div>
             <!-- sidebar main -->
-            <div class="">
-                <!-- sidebar card -->
-
-                <div class="border text-white border-white p-[8px] rounded m-[8px] flex justify-between relative">
-                    <div class="flex gap-[15px]">
-                        <img class="object-cover h-[100px] w-[80px]" src="./assests/meal-1.jpg" alt="">
-                        <div>
-                            <p class="font-[600]">name</p>
-                            <p class="">price</p>
-                            <div class="flex items-center text-black mt-[10px]">
-                                <button class="bg-gray-200 px-2 py-[1px] rounded-sm mr-[-1px]">-</button>
-                                <p class="bg-white w-auto px-[15px]">1</p>
-                                <button class="bg-gray-200 px-2 py-[1px] rounded-sm ml-[-1px]">+</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="self-end font-bold">Price$</div>
-                    <div class="bg-white absolute top-[-5px] right-[-5px] p-1 rounded">
-                        <img class="w-[20px] h-[20px]" src="./assests/bin.png" alt="">
-                    </div>
-                </div>
-
-
+            <div id="sidebar-container">
+                <!-- sidebar cards here -->
+                <!-- sidebar cards here -->
+                <!-- sidebar cards here -->
+                <!-- sidebar cards here -->
+                <!-- sidebar cards here -->
             </div>
             <!-- sidebar footer -->
-            <div class="flex items-center justify-between p-[15px] bg-[white] absolute bottom-0 w-full text-[#ff5242]">
-                <p>Place order <span class="font-[600] text-[#ff5242]">269$</span></p>
+            <div class="p-[15px] bg-[white] absolute bottom-0 w-full text-[#ff5242] text-center">
+                <p>Place order <span class="font-[600]"><span id="sidebar-totalprice">0</span> $</span>
+                </p>
             </div>
         </section>
 
     </section>
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/index.js"></script>
 
 </body>
 
