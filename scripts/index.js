@@ -160,17 +160,25 @@ const loadCartItems = () => {
 
 loadCartItems();
 
-// sidebar open
+// cart btn
 document.getElementById("cart-btn").addEventListener("click", () => {
-  document.getElementById("sidebar").classList.remove("translate-x-[400px]");
-  document.getElementById("sidebar").classList.remove("w-0");
-  document.getElementById("sidebar").classList.add("w-[400px]");
-  isSideBarOpen(true);
+  if (isSideBarOpen) {
+    document.getElementById("sidebar").classList.add("translate-x-[400px]");
+    document.getElementById("sidebar").classList.remove("w-[400px]");
+    document.getElementById("sidebar").classList.add("w-0");
+    isSideBarOpen = false;
+  } else {
+    document.getElementById("sidebar").classList.remove("translate-x-[400px]");
+    document.getElementById("sidebar").classList.remove("w-0");
+    document.getElementById("sidebar").classList.add("w-[400px]");
+    isSideBarOpen = true;
+  }
 });
-// sidebar close
+
+// sidebar close btn
 document.getElementById("sidebar-close").addEventListener("click", () => {
   document.getElementById("sidebar").classList.add("translate-x-[400px]");
   document.getElementById("sidebar").classList.remove("w-[400px]");
   document.getElementById("sidebar").classList.add("w-0");
-  isSideBarOpen(false);
+  isSideBarOpen = false;
 });
